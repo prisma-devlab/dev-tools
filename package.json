@@ -1,0 +1,81 @@
+{
+  "name": "dev-tools",
+  "version": "1.0.0",
+  "description": "A comprehensive collection of essential utility tools for developers by Prisma Devlab",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prettier": "prettier --ignore-unknown --write '*/**/*.{js,json,ts,tsx,scss,css,md}'",
+    "prepare": "npx husky",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prisma-devlab/dev-tools.git"
+  },
+  "keywords": [
+    "developer tools",
+    "utility tools",
+    "web development",
+    "prisma",
+    "developer utilities",
+    "coding tools",
+    "programming utilities"
+  ],
+  "author": {
+    "name": "Prisma Devlab",
+    "url": "https://github.com/prisma-devlab/"
+  },
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/prisma-devlab/dev-tools/issues"
+  },
+  "homepage": "https://github.com/prisma-devlab/dev-tools",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.485.0",
+    "next": "^14.2.16",
+    "next-themes": "^0.4.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.16",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-import-resolver-typescript": "^4.3.1",
+    "eslint-plugin-check-file": "^3.1.0",
+    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-react": "^7.37.4",
+    "husky": "^9.1.7",
+    "postcss": "^8",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,13 @@
+echo "🔍 Running lint checks..."
+npx lint-staged || {
+  echo "❌ Linting failed. Please fix the issues and try committing again."
+  exit 1
+}
+
+echo "🏗️ Building project to verify..."
+npm run build || {
+  echo "❌ Build failed. Please fix the build issues and try committing again."
+  exit 1
+}
+
+echo "✅ Pre-commit checks passed! Proceeding with commit."
