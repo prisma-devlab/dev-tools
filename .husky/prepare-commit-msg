@@ -1,7 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
 # Only use template for new commits, not for merge, amend, rebase
 COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
-
 if [ -z "$COMMIT_SOURCE" ]; then
   cat .github/commit-template.txt > $COMMIT_MSG_FILE
 fi
